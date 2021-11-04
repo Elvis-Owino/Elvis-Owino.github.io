@@ -8,13 +8,13 @@
 .container{
     height: 500px;
     width: 100%;
-    background-image: url(headimage.jpg);
+    background-image: url(C:\Users\Elvis Owino\Documents\GitHub\Elvis-Owino.github.io\moringa1\headimage.jpg);
     background-size: cover;
     background-position: center;
     overflow: hidden ;
     padding-top: 50px;
-
 }
+
 .navbar{
     position: fixed;
     top: 0;
