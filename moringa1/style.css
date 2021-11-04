@@ -8,7 +8,7 @@
 .container{
     height: 500px;
     width: 100%;
-    background-image: url(moringa1\headimage.jpg);
+    background-image: url(headimage.jpg);
     background-size: cover;
     background-position: center;
     overflow: hidden ;
@@ -157,7 +157,7 @@ hr{
 .footerdiv{
     height: 200px;
     width: 100%;
-    background-image: url(github.io\moringa1\about.jpg);
+    background-image: url(about.jpg);
     background-size: cover;
     background-position: center;
     overflow: hidden ;
