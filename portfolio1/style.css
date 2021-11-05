@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+  scroll-behavior: smooth;
+  transition: 1s;
+}
+body{
+    background: whitesmoke;
+}
+
+.container{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  padding: 50px 8%;
+  font-weight: 600;
+}
+
+nav{
+  background-image: url(circle.png) ;
+  width:350px;
+  background-size: cover;
+  background-position: right ;
+  padding: 10% 5% 15% 15%;
+  position: absolute;
+  left: -20%;
+  top: -15%;
+}
+nav h1{
+  text-align: right;
+  font-weight: 700;
+  font-style: oblique;
+  color: rgb(156, 126, 128);
+  margin-bottom: 20px;
+}
+nav ul{
+ text-align: left;
+ list-style-type: none;
+}
+nav ul li{
+  margin: 10px 5px;
+}
+nav ul li::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: tomato;
+  display: block;
+  text-align: right;
+  transition: 0.5s;
+}
+nav ul li:hover::after{
+  width: 60%;
+  text-decoration: none;
+}
+
+nav ul a{
+  color: white;
+}
+nav ul a:hover{
+  text-decoration: none;
+  color: white;
+}
+
+
+.contact-btn{
+  position: absolute;
+  top: 40px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+}
+.contact-btn:hover{
+  text-decoration: none;
+  color: black;
+  transform: translateY(-3px);
+}
+.contact-btn::after{
+  content: '';
+  background: sandybrown;
+  width: 0px;
+  height: 2px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 35%;
+  transform: translate(-50%);
+}
+.contact-btn:hover::after{
+  width: 80px;
+  transition: 0.8s;
+}
+
+
+
+.contact-btn img{
+  width: 20px;
+  margin-left: 15px;
+}
+.intro{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  margin-top: 50px;
+}
+.intro-1{
+  max-width: 600px;
+  padding-left:30px;
+color:black;
+}
+.intro-1 h1{
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 50px;
+  margin-bottom: 30px;
+}
+.intro-1 a{
+  color:rgb(250, 52, 17);
+  background-color:none;
+  padding: 3px;
+  border-radius: 4px;
+  margin-left: 30%;
+}
+.intro-1 a:hover{
+ background-color: darkgrey; 
+ text-decoration: none;
+}
+
+.intro-2{
+  position: relative;
+  text-align: right;
+}
+.Me{
+  width: 200px;
+  min-width: 150px;
+  position: relative;
+  z-index: 2;
+  border-radius: 20% 50% ;
+}
+.redimage{
+  position: absolute;
+width: 220px;
+min-width: 150px;
+top: -20px;
+right: 5px;
+display: none;
+}
+.Me:hover{
+transform: translate(-25px, -35px);
+border-radius: 20% 50%;
+margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---Media Queries --*/
+@media (max-width: 992px) {
+
+  }
+@media (max-width: 768px) {
+  
+}
+@media (max-width: 576px) {
+  
+}
+
+
+/*---Firefox Bug Fix --*/
+.carousel-item {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+/*--- Fixed Background Image --*/
+figure {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  margin: 0!important;
+}
+.fixed-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#fixed {
+  background-image: url('img/mac.png');
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform;
+}
+/*--- Bootstrap Padding Fix --*/
+[class*="col-"] {
+    padding: 1rem;
+}
+
+
+
+
+
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
+
+
+
+
+
+
+
+
