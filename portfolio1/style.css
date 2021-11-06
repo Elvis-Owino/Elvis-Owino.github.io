@@ -131,7 +131,7 @@ nav ul a:hover{
   margin-top: 50px;
 }
 .intro-1{
-  max-width: 600px;
+  max-width: 700px;
   padding-left:30px;
 color:black;
 }
@@ -200,7 +200,19 @@ margin-top: 20px;
 
 /*---Media Queries --*/
 
-@media (max-width: 1300px) {
+@media(max-width:1400px){
+  nav{
+    background-image: url(circle.png) ;
+    width:350px;
+    background-size: cover;
+    background-position: right ;
+    padding: 10% 5% 15% 15%;
+    position: fixed;
+    left: -8%;
+    top: -15%;
+  }
+}
+@media (max-width: 1310px) {
   .intro{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px,1 fr));
@@ -212,8 +224,9 @@ margin-top: 20px;
     text-align: left;
     margin-top: 350px;
   }
-  .Me{
-   margin: 5px auto;
+  .intro-2 img{
+   float: right;
+   border-radius: 0;
   }
   }
 @media (max-width: 768px) {
