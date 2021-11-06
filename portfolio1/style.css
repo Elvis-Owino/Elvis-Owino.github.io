@@ -8,7 +8,25 @@
   transition: 1s;
 }
 body{
-    background: whitesmoke;
+    animation: blink 10s infinite;
+    -webkit-animation: blink 30s infinite;
+}
+
+@keyframes blink{
+  0% {background: whitesmoke ;}
+  20% {background:rgb(182, 180, 180) ;}
+  40% {background:rgb(133, 132, 132) ;}
+  60% {background:rgb(88, 88, 88) ;}
+  80% {background:rgb(68, 68, 68) ;} 
+  100% {background: whitesmoke ;}
+}
+@-webkit-keyframes blink{
+  0% {background: whitesmoke ;}
+  20% {background:rgb(182, 180, 180) ;}
+  40% {background:rgb(133, 132, 132) ;}
+  60% {background:rgb(88, 88, 88) ;}
+  80% {background:rgb(68, 68, 68) ;} 
+  100% {background: whitesmoke ;}
 }
 
 .container{
