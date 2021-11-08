@@ -165,7 +165,6 @@ color:black;
   background-color:none;
   padding: 3px;
   border-radius: 4px;
-  margin-left: 30%;
 }
 .intro-1 a:hover{
  background-color: darkgrey; 
@@ -199,8 +198,8 @@ transition: 2s;
 }
 
 .ipsum{
-  margin: auto;
-  margin-top: 600px;
+  margin: 0 auto;
+  
   margin: 0 20%;
 }
 
@@ -237,6 +236,7 @@ transition: 2s;
   }
   .intro-1{
     max-width: 500px;
+    margin-left: 10px;
   }
   nav h1{
     margin-left: -64px;
@@ -246,7 +246,7 @@ transition: 2s;
 
 @media (max-width: 1350px) {
   header{
-    margin-bottom: 600px;
+    margin-bottom: 300px;
   }
   nav{
     background-image: url(circle.png) ;
@@ -271,9 +271,12 @@ transition: 2s;
     margin-left: 30px;
   }
   .intro-2 img{
-   float: right;
+  
    border-radius: 0;
    margin: 0 30%;
+  }
+  .intro-2 img:hover{
+    border-radius: 0;
   }
   }
 
@@ -284,6 +287,9 @@ transition: 2s;
  .contact-btn{
     margin-top: 300px;
   }
+  header{
+    margin-bottom: 510px;
+  }
 }
 
 
@@ -293,10 +299,13 @@ transition: 2s;
   }
   
 }
-@media (max-width: 576px) {
+@media (max-width: 770px) {
  .intro{
    text-align: center;
  }
+ header{
+  margin-bottom: 600px;
+}
 }
 
 
