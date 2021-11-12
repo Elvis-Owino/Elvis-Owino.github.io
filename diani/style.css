@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+.intro{
+  min-height: 100vh;
+  background: linear-gradient(to right top, lightblue, rgba(14, 14, 161, 0.425));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glass{
+  background: white;
+  min-height: 80vh;
+  width: 70%;
+  background: url(mainpic.jpg);
+  background-size: cover;
+  border-radius: 2rem;
+  z-index: 2;
+  backdrop-filter: blur(2rem);
+  position: relative;
+  display: flex;
+}
+
+.circle1, .circle2, .circle3, .circle4, .circle5, .circle6, .circle7 {
+  background:linear-gradient(to right bottom, rgba(255,255,255, 0.9), rgba(255,255,255, 0.1)); ;
+  height: 5rem;
+  width: 5rem;
+  position: absolute;
+  border-radius: 50%;
+}
+  @keyframes translate{
+  0%{right:0% ; top:0% ;}
+  25%{right:30% ; top: 40%;} 
+  50%{right:60% ; top:80% ;}
+  75%{right:40% ; top:60% ;}
+  100%{right: 20% ; top:20% ;}
+  }
+.circle1{
+ animation: translate 60s infinite ;
+}
+
+@keyframes translate1{
+  0%{left:0% ; bottom:0% ;}
+  25%{left:40% ; bottom: 40%;} 
+  50%{left:72% ; bottom:80% ;}
+  75%{left:60% ; bottom:60% ;}
+  100%{left: 20% ; bottom:20% ;}
+  }
+.circle2{
+  animation: translate1 60s infinite ;
+}
+
+@keyframes translate2{
+  0%{right:20% ; bottom:20% ;}
+  25%{right:40% ; bottom: 40%;} 
+  50%{right:72% ; bottom:80% ;}
+  75%{right:40% ; bottom:60% ;}
+  100%{right: 20% ; bottom:20% ;}
+  }
+.circle3{
+  animation: translate2 60s infinite ;
+}
+
+@keyframes translate3{
+  0%{right:20% ; bottom:10% ;}
+  25%{right:40% ; top: 35%;} 
+  50%{right:72% ; top:65% ;}
+  75%{right:60% ; top:45% ;}
+  100%{right: 40% ; top:25% ;}
+  }
+.circle4{
+animation: translate3 60s infinite;
+}
+
+@keyframes translate4{
+  0%{left:10% ; bottom:30% ;}
+  25%{left:30% ; bottom: 50%;} 
+  50%{left:60% ; bottom:80% ;}
+  75%{left:40% ; bottom:60% ;}
+  100%{left: 20% ; bottom:40% ;}
+  }
+.circle5{
+animation: translate4 60s infinite;
+}
+
+@keyframes translate5{
+  0%{right:5% ; bottom:5% ;}
+  25%{right:35% ; top: 35%;} 
+  50%{right:65% ; top:65% ;}
+  75%{right:40% ; top:40% ;}
+  100%{right: 20% ; top:20% ;}
+  }
+.circle6{
+  animation: translate5  60s infinite;
+}
+
+@keyframes translate6{
+  0%{right:50% ; bottom:40% ;}
+  25%{right:30% ; top: 60%;} 
+  50%{right:0% ; top:80% ;}
+  75%{right:30% ; top:60% ;}
+  100%{right: 50% ; top:20% ;}
+  }
+.circle7{
+ animation: translate6  60s infinite;
+}
+
+
+.navigation{
+  display: block;
+  padding: 0.8rem;
+  background: rgb(29, 29, 238);
+  width: 3rem;
+  position: relative;
+  height: 80vh;
+  transition:  0.5s;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+.navigation.active{
+  width: 10rem;
+  height: 40vh;
+  background:transparent;
+ 
+  font-weight: 400;
+}
+.navigation.active .titles{
+  display: inline-block;
+   color: white;
+}
+.navigation.active .icons i{
+  margin-bottom: 0;
+  color: white;
+}
+.navigation ul {
+  list-style-type: none;
+}
+.navigation ul li a{
+  color: black;
+}
+.navigation ul li a:hover{
+  text-decoration: none;
+  color: white;
+}
+.navigation.active.navigation ul li a:hover{
+  color: red;
+  text-decoration:none;
+}
+
+.icons i{
+  min-width: 2rem;
+  margin-bottom: 2rem;
+}
+.titles{
+white-space: nowrap;
+display:none ;
+}
+
+.toggler{
+  position: absolute;
+  right: -15%;
+  top: 38%;
+  border: 0.1rem solid rgb(29, 29, 238);
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background:rgb(29, 29, 238) ;
+}
+.toggler::before{
+  font-family : "Font Awesome 5 Free"; 
+  font-weight: 900; 
+  content: "\f054"; 
+  width:100% ;
+  height: 100%;
+  position: absolute;
+  color:white; ;
+  text-align: center;
+  z-index: 2;
+  line-height: 0.7rem;
+  margin: auto;
+  padding-top: 0.2rem;
+  padding-left: 0.1rem;
+}
+
+.toggler.active::before{
+  
+  font-family : "Font Awesome 5 Free";
+   content: "\f053" ;
+  font-weight: 900; 
+}
+
+.hotel1{
+ position: relative;
+
+}
+.card1{
+ position: absolute; 
+ top: 20%;
+ left: 25%;
+ right: 25%;
+ margin-top: 5rem;
+
+}
+.card1 img{
+  width:100%;
+}
+
+
+
+
+
+
+
+
+/*---Media Queries --*/
+@media (max-width: 992px) {
+
+  }
+@media (max-width: 768px) {
+  
+}
+@media (max-width: 650px) {
+  
+}
+
+
+/*---Firefox Bug Fix --*/
+.carousel-item {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+/*--- Fixed Background Image --*/
+figure {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  margin: 0!important;
+}
+.fixed-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#fixed {
+  background-image: url('img/mac.png');
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform;
+}
+/*--- Bootstrap Padding Fix --*/
+[class*="col-"] {
+    padding: 1rem;
+}
+
+
+
+
+
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
+
+
+
+
+
+
+
+
