@@ -10,10 +10,9 @@ body{
   position: relative;
 }
 header{
-  background: linear-gradient(to bottom, rgba(240, 239, 186, 0.3), rgba(255, 255, 255, 0.3));
+  background:radial-gradient( #c9e6eb34, rgba(184, 215, 216, 0.192));
   backdrop-filter: blur(2rem);
-  height: 100vh;
-  margin-bottom: 3rem;
+  height: calc(100vh + 4rem);
 }
 
 .intro{
@@ -51,18 +50,22 @@ header{
 z-index: 4;
 }
 .navWrap {
-  min-height:6rem;
+  min-height:4rem; 
+   position: sticky;
+   top: 0;
+   left: 0;
 }
 .navWrap p{ 
   text-align: center;
-  font-size: 6vw;
-  -webkit-text-stroke: 0.1rem rgb(241, 145, 19);
+  font-size: 5vw;
+  -webkit-text-stroke: 0.1rem rgb(250, 0, 167);
   background: url(back.png);
   -webkit-background-clip: text;
   background-position: 0 0;
-  animation:back 2s linear infinite ;
+  animation:back 20s linear infinite ;
   color: transparent;
   font-family: cursive;
+  z-index: 6;
 }
 @keyframes back{
   100%{background-position: 50rem 0;}
@@ -162,7 +165,7 @@ animation: translate4 60s infinite;
 .navigation{
   display: block;
   padding: 0.8rem;
-  background: rgb(255, 0, 0);
+  background:radial-gradient( #c9e6eb34, rgba(184, 215, 216, 0.342));
   width: 3rem;
   position: relative;
   height: 80vh;
@@ -211,11 +214,11 @@ display:none ;
   position: absolute;
   right: -15%;
   top: 38%;
-  border: 0.1rem solid rgb(255, 0, 0);
+  border: 0.1rem solid radial-gradient( #c9e6eb34, rgba(184, 215, 216, 0.342));
   width: 1.2rem;
   height: 1.2rem;
   border-radius: 50%;
-  background:rgb(255, 0, 0) ;
+  background:radial-gradient( #c9e6eb34, rgba(184, 215, 216, 0.342)) ;
 }
 .toggler::before{
   font-family : "Font Awesome 5 Free"; 
@@ -224,7 +227,7 @@ display:none ;
   width:100% ;
   height: 100%;
   position: absolute;
-  color:white; ;
+  color:rgb(255, 255, 255); ;
   text-align: center;
   z-index: 2;
   line-height: 0.7rem;
@@ -298,7 +301,7 @@ display:none ;
   border-radius: 0.4rem;
   margin: 10% 5%;
   text-align: center;
-  padding: 0 3rem;
+  padding: 1rem 3rem;
 }
 .box::before{
   content: '';
@@ -323,7 +326,7 @@ display:none ;
 }--*/
 
 .box h3{
-margin: 1.6rem 0;
+margin: 1rem 0;
 color:whitesmoke;
 font-size: 1rem;
 font-family: cursive;
@@ -334,7 +337,7 @@ font-family: cursive;
 
 
 .slider{
-  margin:4rem 2rem;
+  margin:2rem 2rem;
   padding: 0;
   background: white;
 }
@@ -412,7 +415,7 @@ grid-template-columns: repeat(4, minmax(20px, 350px));
   text-align: center;
 }
 .dishes:hover{
-  transform: perspective(200rem) translateX(50%);
+  transform: perspective(200rem) translateX(-50%);
   box-shadow: inset 2rem 0 5rem rgba(0,0,0,0.15), 0 1rem 1rem rgba(0,0,0,0.15);
 }
 
@@ -464,14 +467,15 @@ transform-style: preserve-3d;
 overflow: hidden;
 background:rgb(255, 254, 254);
 z-index:2;
-transition:1s ease-in-out;
+transition:1.5s ease-in-out;
 transform-origin:left;
 padding-top: 2.5rem;
-
+box-shadow: inset 6rem 0 5rem rgba(0,0,0,0.15), 0 2rem 2rem rgba(0,0,0,0.15) ;
 }
 .dishes:hover .coverpic{
   transform: rotateY(180deg) ;
-  
+  transform-origin: right;
+  box-shadow: inset 2rem 0 5rem rgba(0,0,0,0.15), 0 1rem 1rem rgba(0,0,0,0.15);
 }
 .coverpic img{
   z-index: 1;
@@ -484,7 +488,7 @@ padding-top: 2.5rem;
   position:absolute;
   width:5rem;
   background: rgb(231, 215, 215);
-  transform: rotate(0deg);
+  transform: rotateX(34deg);
   transition:0.5s;
   transition-delay: 1s;
   z-index:5;
@@ -493,8 +497,11 @@ padding-top: 2.5rem;
 }
 .dishes:hover .coverpic::before{
   width:0;
-  transform: rotate(146deg)
+  transform: rotateX(146deg)
 }
+
+
+
 
 
 /*---Media Queries --*/
@@ -503,7 +510,32 @@ padding-top: 2.5rem;
  margin-left: 12%;
  margin-right: 12%;
 }
+
+.dishes:hover .coverpic{
+  transform: rotateY(180deg) ;
+}
+
+.main-img img{
+  max-height: 100vh;
+  overflow-y: scroll;
+  border-top-left-radius:0.8rem;
+  border-top-right-radius:0.8rem;
+} 
+
+.circle1{
+  position: fixed;
+  top:0;
+  left: 0;
+ width: 8rem;
+ height: 8rem;
+ border-radius: 50%;
+ background: url(outdoor7.jpg);
+ background-size: cover;
+z-index: 4;
+}
   }
+
+
 @media (max-width: 1050px) {
   .info{
     display: grid;
@@ -514,6 +546,13 @@ padding-top: 2.5rem;
     align-items: center;
   } 
 
+  .main-img img{
+    max-height: 95vh;
+    overflow-y: scroll;
+    border-top-left-radius:0.8rem;
+    border-top-right-radius:0.8rem;
+  } 
+
   .slideshow{
     margin-left: 10%;
     margin-right: 10%;
@@ -521,6 +560,18 @@ padding-top: 2.5rem;
 
 }
 @media (max-width: 550px) {
+  .circle1{
+    position: fixed;
+    top:0;
+    left: 0;
+   width: 6rem;
+   height: 6rem;
+   border-radius: 50%;
+   background: url(outdoor7.jpg);
+   background-size: cover;
+  z-index: 4;
+  }
+
   .info{
     display: grid;
     grid-template-columns: 1fr;
@@ -530,9 +581,23 @@ padding-top: 2.5rem;
     align-items: center;
   }
 
+  .main-img img{
+    max-height: 65vh;
+    overflow-y: scroll;
+    border-top-left-radius:0.8rem;
+    border-top-right-radius:0.8rem;
+  } 
+
   .slideshow{
     margin-left: 8%;
     margin-right: 8%;
    } 
+   .dishes:hover{
+    transform: perspective(200rem);
+    box-shadow: inset 2rem 0 5rem rgba(0,0,0,0.15), 0 1rem 1rem rgba(0,0,0,0.15);
+  }
+   .dishes:hover .coverpic{
+    transform: translateY(30rem) ; 
+  }
 
   }
